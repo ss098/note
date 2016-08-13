@@ -1,8 +1,48 @@
+@linkColor: #3354AA;
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizelegibility;
+  font-size: 16px;
+}
+
+body, button, textarea, input, code {
+  font-family: Lucida Console, Bookman Old Style, 'Ubuntu', Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
 }
 
 a {
-  color: #00B7FF;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  &:link {
+    color: @linkColor;
+  }
+  &:hover {
+    color: @linkColor;
+  }
 }
+
+.small-text {
+  font-size: 0.8rem;
+  margin: 0;
+  color: #848484;
+}
+
+
+input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="button"], .button {
+  padding: 0.5em;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+@import "card.less";
