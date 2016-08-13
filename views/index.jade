@@ -1,5 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div.card
+    div.header
+      h1 #{title}
+      p(class="small-text") 8 月 13 日
+    div.content
+      p 随便一点字符串
+    div.footer
+      p Copyright 2016
