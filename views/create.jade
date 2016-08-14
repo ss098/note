@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    div.card
+        div.header
+            h1 创建新的文档
+        form(action="/create", method="post").content
+            p
+              label 文章标题：
+              input(type="text", name="title")
+            p
+              label 为这篇文章添加密码：
+              input(type="text", name="password")
+            p(class="small-text")  设置密码后的文档才能被删除
+            p
+              textarea(name="content")
+            input(type="submit", value="确认创建文档").button
+        div.footer
+            p Copyright 2016 Note |
+                a(href="https://github.com/ss098/note")  查看 GitHub

@@ -10,10 +10,14 @@
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "express": "~4.13.4",
+    "helmet": "^2.1.2",
     "jade": "~1.11.0",
     "less-middleware": "1.0.x",
+    "marked": "^0.3.6",
+    "mongoose": "~4.5.8",
     "morgan": "~1.7.0",
+    "mpromise": "^0.5.5",
     "serve-favicon": "~2.3.0",
-    "mongoose": "~4.5.8"
+    "xss": "~0.2.13"
   }
 }

@@ -1,6 +1,11 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  div.card
+    div.header
+      h1 出现了一个错误
+    div.content
+      p #{message}
+    div.footer
+      p Copyright 2016 Note |
+        a(href="https://github.com/ss098/note")  查看 GitHub

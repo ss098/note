@@ -4,8 +4,13 @@ block content
   div.card
     div.header
       h1 #{title}
-      p(class="small-text") 8 月 13 日
+      p(class="small-text") #{date}
     div.content
-      p 随便一点字符串
+      p !{content}
     div.footer
-      p Copyright 2016
+      a(href="create") 分享属于我的文档
+      if password
+        a(href="/" + _id + "/delete")  | 删除这篇文档
+      a(href="/" + _id + "/qrcode")  | 获得这篇文章的二维码
+      p Copyright 2016 Note |
+        a(href="https://github.com/ss098/note")  查看 GitHub
