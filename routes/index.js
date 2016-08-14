@@ -3,6 +3,7 @@ var router = express.Router();
 var Note = require("../models/note.js");
 var marked = require('marked');
 var xss = require("xss");
+var qr = require('qr-image');
 
 router.get('/', function(req, res) {
   res.render('create');
@@ -28,6 +29,23 @@ router.post('/create', function(req, res) {
     }).then(function (document) {
       res.redirect("/" + document._id);
     });
+  });
+});
+
+router.get('/:id/qrcode', function(req, res, next) {
+  Note.findById(req.params.id, function (err, note) {
+    if (note == undefined) {
+      var now = new Date();
+      res.render('index', {
+        "title": "这是一篇空文档",
+        "date": now.toLocaleDateString(),
+        "content": "这个页面并不存在，请向你分享这个页面的用户联系。"
+      });
+    } else {
+      res.writeHead(200, {'Content-Type': 'image/png'});
+      var qr_png = qr.image(process.env.BASEURL + note._id,{type: "png"});
+      qr_png.pipe(res);
+    }
   });
 });
 

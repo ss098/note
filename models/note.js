@@ -2,8 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 mongoose.Promise = global.Promise;
 
-// process.env.MONGO_CONNECT_STRING
-mongoose.connect("mongodb://122.114.110.225/note");
+mongoose.connect(process.env.MONGO_CONNECT_STRING);
 
 var noteSchema = new Schema({
     title:  String,
