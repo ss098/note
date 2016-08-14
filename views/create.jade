@@ -4,6 +4,7 @@ block content
     div.card
         div.header
             h1 创建新的文档
+            p(class="small-text") 请悉知分享的文章无法由用户主动删除
         form(action="/create", method="post").content
             p
               label 文章标题：
@@ -11,7 +12,6 @@ block content
             p
               label 为这篇文章添加密码：
               input(type="text", name="password")
-            p(class="small-text")  设置密码后的文档才能被删除
             p
               textarea(name="content")
             input(type="submit", value="确认创建文档").button
