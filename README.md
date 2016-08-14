@@ -1,4 +1,6 @@
-目前尚不可以使用。
+在线 Demo：[https://ss098-note.daoapp.io/](https://ss098-note.daoapp.io/)
+
+查看 Releases：[https://github.com/ss098/note/releases](https://github.com/ss098/note/releases)
 
 Note 是一个功能简单的文章分享系统，可以为你提供的 Markdown 格式的文本生成一个唯一的 URL 分享到互联网上。
 
