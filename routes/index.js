@@ -6,11 +6,15 @@ var xss = require("xss");
 var qr = require('qr-image');
 
 router.get('/', function(req, res) {
-  res.render('create');
+  res.render('create', {
+    "title": "分享属于我的新文档"
+  });
 });
 
 router.get('/create', function(req, res) {
-  res.render('create');
+  res.render('create', {
+    "title": "分享属于我的新文档"
+  });
 });
 
 router.post('/create', function(req, res) {
