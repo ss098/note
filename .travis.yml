@@ -1,0 +1,20 @@
+language: node_js
+
+node_js:
+  - "node"
+  - "6"
+  - "5"
+  - "4"
+
+services:
+  - mongodb
+
+install:
+  - npm install
+
+script:
+  - npm start
+  
+env:
+  - BASEURL=https://www.example.com
+  - MONGO_CONNECT_STRING=mongodb://127.0.0.1/note
